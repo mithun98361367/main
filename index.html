@@ -1,98 +1,137 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            Create a Form Dynamically with 
-            the JavaScript
-        </title>
-    </head>
-    <body style="text-align: center;">
-        <h1 style="color: green;">
-            GeeksforGeeks
-        </h1>
-        <p>
-          Click on the button to create
-          a form dynamically
-        </p>
-        <button onClick="GFG_Fun()">
-            click here
-        </button>
-        <p id="GFG_DOWN"></p>
- <script>
-    var down = document.getElementById("GFG_DOWN");
-          
-    // Create a break line element
-    var br = document.createElement("br"); 
-    function GFG_Fun() {
-              
-    // Create a form dynamically
-    var form = document.createElement("form");
-    form.setAttribute("method", "post");
-    form.setAttribute("action", "submit.php");
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    // Create an input element for Full Name
-    var FN = document.createElement("input");
-    FN.setAttribute("type", "text");
-    FN.setAttribute("name", "FullName");
-    FN.setAttribute("placeholder", "Full Name");
+  <title>Engineer Application</title>
 
-     // Create an input element for date of birth
-     var DOB = document.createElement("input");
-     DOB.setAttribute("type", "text");
-     DOB.setAttribute("name", "dob");
-     DOB.setAttribute("placeholder", "DOB");
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-     // Create an input element for emailID
-     var EID = document.createElement("input");
-     EID.setAttribute("type", "text");
-     EID.setAttribute("name", "emailID");
-     EID.setAttribute("placeholder", "E-Mail ID");
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
 
-      // Create an input element for password
-      var PWD = document.createElement("input");
-      PWD.setAttribute("type", "password");
-      PWD.setAttribute("name", "password");
-      PWD.setAttribute("placeholder", "Password");
+    /* MENU */
+    .menu {
+      height: 55px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      background: #1a73e8;
+    }
 
-       // Create an input element for retype-password
-       var RPWD = document.createElement("input");
-       RPWD.setAttribute("type", "password");
-       RPWD.setAttribute("name", "reTypePassword");
-       RPWD.setAttribute("placeholder", "ReEnter Password");
+    .menu button {
+      border: none;
+      background: transparent;
+      color: white;
+      padding: 10px 16px;
+      font-size: 15px;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+    }
 
-                // create a submit button
-                var s = document.createElement("input");
-                s.setAttribute("type", "submit");
-                s.setAttribute("value", "Submit");
-                
-                // Append the full name input to the form
-                form.appendChild(FN); 
-                
-                // Inserting a line break
-                form.appendChild(br.cloneNode()); 
-                
-                // Append the DOB to the form
-                form.appendChild(DOB); 
-                form.appendChild(br.cloneNode()); 
-                
-                // Append the emailID to the form
-                form.appendChild(EID); 
-                form.appendChild(br.cloneNode()); 
-                
-                // Append the Password to the form
-                form.appendChild(PWD); 
-                form.appendChild(br.cloneNode()); 
-                
-                // Append the ReEnterPassword to the form
-                form.appendChild(RPWD); 
-                form.appendChild(br.cloneNode()); 
-                
-                // Append the submit button to the form
-                form.appendChild(s); 
+    .menu button:hover {
+      background: rgba(255,255,255,0.18);
+    }
 
-                document.getElementsByTagName("body")[0]
-               .appendChild(form);
-            }
-        </script>
-    </body>
+    .menu button.active {
+      background: white;
+      color: #1a73e8;
+    }
+
+    /* CONTENT */
+    .content {
+      height: calc(100vh - 55px);
+      width: 100%;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="menu">
+
+    <button
+      class="active"
+      onclick="openPage('home', this)">
+      🏠 Home
+    </button>
+
+    <button
+      onclick="openPage('engineer', this)">
+      👨‍🔧 Engineer
+    </button>
+
+    <button
+      onclick="openPage('admin', this)">
+      🗺️ Admin
+    </button>
+
+  </div>
+
+  <div class="content">
+
+    <iframe
+      id="appFrame"
+      allow="geolocation; camera; microphone"
+      src="https://mithunmanna.weebly.com/">
+    </iframe>
+
+  </div>
+
+  <script>
+
+    const APP_URL =
+      "https://script.google.com/macros/s/AKfycbzCFSk-kVz2PuRBVNk_RPzk_fNElhBmE4TzwCPJApzEPjPF7n536Ap1dIGveIYdq7oS/exec";
+
+    function openPage(page, button) {
+
+      const frame =
+        document.getElementById("appFrame");
+
+      let url = APP_URL;
+
+      if (page === "home") {
+        url = APP_URL;
+      }
+
+      if (page === "engineer") {
+        url = APP_URL + "?page=index";
+      }
+
+      if (page === "admin") {
+        url = APP_URL + "?page=admin";
+      }
+
+      frame.src = url;
+
+      document
+        .querySelectorAll(".menu button")
+        .forEach(function(btn) {
+          btn.classList.remove("active");
+        });
+
+      button.classList.add("active");
+    }
+
+  </script>
+
+</body>
 </html>
