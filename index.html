@@ -61,6 +61,16 @@
       border: none;
       display: block;
     }
+	
+#footer,
+.wsite-footer {
+    display: none !important;
+}
+
+#main {
+    min-height: 100vh !important;
+}
+
   </style>
 </head>
 
@@ -75,8 +85,18 @@
     </button>
 
     <button
-      onclick="openPage('engineer', this)">
-      👨‍🔧 Engineer
+      onclick="openPage('mvs', this)">
+      👨‍🔧 MVS
+    </button>
+
+    <button
+      onclick="openPage('inout', this)">
+      🗺️ In out
+    </button>
+	
+	 <button
+      onclick="openPage('tracker', this)">
+      👨‍🔧 Tracker
     </button>
 
     <button
@@ -91,15 +111,26 @@
     <iframe
       id="appFrame"
       allow="geolocation; camera; microphone"
-      src="https://mithunmanna.weebly.com/">
+      src="https://script.google.com/macros/s/AKfycby2uLha-AAkXBoEv7QlvRugE1cRj81Uv3CBt8N4BIVzgt4SMb9zkL7noU0UjzNnebi3/exec">
     </iframe>
 
   </div>
 
   <script>
 
+    /* GOOGLE APPS SCRIPT URLS */
+
     const APP_URL =
-      "https://script.google.com/macros/s/AKfycbzCFSk-kVz2PuRBVNk_RPzk_fNElhBmE4TzwCPJApzEPjPF7n536Ap1dIGveIYdq7oS/exec";
+      "https://script.google.com/macros/s/AKfycby2uLha-AAkXBoEv7QlvRugE1cRj81Uv3CBt8N4BIVzgt4SMb9zkL7noU0UjzNnebi3/exec";
+
+    const APP_URL2 =
+      "https://script.google.com/macros/s/AKfycbxXA4w-zhbu8YufoxJaA1e5o8w9FoexbzCSQ-9C9x5IFQBfUGc2QxlH4vFZ0dMHqTi5/exec";
+
+    const APP_URL3 =
+      "https://script.google.com/macros/s/AKfycbx0GmXAJ5ldOp3HK9eDTyTxvKZyHud3R6wZLB6hYGphZbNWFfhOavQ3KhbIu2rk6WstXw/exec";
+
+
+    /* OPEN PAGE */
 
     function openPage(page, button) {
 
@@ -108,19 +139,48 @@
 
       let url = APP_URL;
 
+
+      /* HOME */
+
       if (page === "home") {
         url = APP_URL;
       }
 
-      if (page === "engineer") {
-        url = APP_URL + "?page=index";
+
+      /* MVS */
+
+      else if (page === "mvs") {
+        url = APP_URL;
       }
 
-      if (page === "admin") {
-        url = APP_URL + "?page=admin";
+
+      /* IN / OUT */
+
+      else if (page === "inout") {
+        url = APP_URL2;
       }
+
+
+      /* TRACKER */
+
+      else if (page === "tracker") {
+        url = APP_URL3;
+      }
+
+
+      /* ADMIN */
+
+      else if (page === "admin") {
+        url = APP_URL3 + "?page=admin";
+      }
+
+
+      /* LOAD IFRAME */
 
       frame.src = url;
+
+
+      /* ACTIVE MENU */
 
       document
         .querySelectorAll(".menu button")
@@ -128,9 +188,10 @@
           btn.classList.remove("active");
         });
 
-      button.classList.add("active");
-    }
 
+      button.classList.add("active");
+
+    }
   </script>
 
 </body>
