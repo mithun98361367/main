@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+      content="Learn about MSS Web Solutions, our web development services, skills, experience and commitment to customer satisfaction.">
+
+<title>About Us - MSS WEB SOLUTIONS</title>
+
+<link rel="stylesheet" href="style.css">
+
+
+<style>
+
+    /* =====================================================
+       ABOUT PAGE
+    ===================================================== */
+
+    * {
+        box-sizing: border-box;
+    }
+
+
+    body {
+        margin: 0;
+        font-family:
+            "Segoe UI",
+            Arial,
+            sans-serif;
+
+        background: #f5f7fb;
+        color: #172033;
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .about-hero {
+
+        min-height: 330px;
+
+        display: flex;
+
+        align-items: center;
+
+        position: relative;
+
+        background:
+            linear-gradient(
+                90deg,
+                rgba(7,18,48,.95),
+                rgba(17,43,105,.82)
+            ),
+            url("image/background-images/2084937753.jpg");
+
+        background-size: cover;
+
+        background-position: center;
+
+        color: white;
+    }
+
+
+    .about-hero-content {
+
+        width: min(1180px, 92%);
+
+        margin: auto;
+
+        text-align: center;
+
+        padding: 65px 0;
+    }
+
+
+    .about-badge {
+
+        display: inline-block;
+
+        padding: 7px 18px;
+
+        border:
+            1px solid rgba(255,255,255,.3);
+
+        border-radius: 50px;
+
+        color: #ffd052;
+
+        background:
+            rgba(255,255,255,.08);
+
+        font-size: 13px;
+
+        font-weight: 700;
+
+        letter-spacing: 1px;
+
+        text-transform: uppercase;
+
+        margin-bottom: 18px;
+    }
+
+
+    .about-hero h1 {
+
+        margin: 0 0 15px;
+
+        font-size:
+            clamp(40px, 6vw, 62px);
+
+        line-height: 1.1;
+
+        font-weight: 800;
+    }
+
+
+    .about-hero h1 span {
+
+        color: #ffd052;
+    }
+
+
+    .about-hero p {
+
+        max-width: 700px;
+
+        margin: auto;
+
+        color: #e1e7f5;
+
+        font-size: 18px;
+
+        line-height: 1.7;
+    }
+
+
+    /* =====================================================
+       MAIN ABOUT SECTION
+    ===================================================== */
+
+    .about-section {
+
+        padding: 90px 0;
+    }
+
+
+    .about-container {
+
+        width: min(1180px, 92%);
+
+        margin: auto;
+    }
+
+
+    .about-grid {
+
+        display: grid;
+
+        grid-template-columns:
+            1.1fr .9fr;
+
+        gap: 55px;
+
+        align-items: center;
+    }
+
+
+    /* =====================================================
+       ABOUT IMAGE
+    ===================================================== */
+
+    .about-image-box {
+
+        position: relative;
+    }
+
+
+    .about-image-box img {
+
+        width: 100%;
+
+        max-height: 500px;
+
+        object-fit: contain;
+
+        display: block;
+
+        border-radius: 20px;
+
+        background: white;
+
+        padding: 15px;
+
+        box-shadow:
+            0 15px 40px rgba(15,23,42,.10);
+    }
+
+
+    .about-image-decoration {
+
+        position: absolute;
+
+        width: 100px;
+        height: 100px;
+
+        right: -18px;
+        bottom: -18px;
+
+        border-radius: 20px;
+
+        background: #ffd052;
+
+        z-index: -1;
+    }
+
+
+    /* =====================================================
+       ABOUT CONTENT
+    ===================================================== */
+
+    .about-content .section-label {
+
+        display: inline-block;
+
+        margin-bottom: 12px;
+
+        color: #d49c16;
+
+        font-size: 13px;
+
+        font-weight: 800;
+
+        letter-spacing: 1.5px;
+
+        text-transform: uppercase;
+    }
+
+
+    .about-content h2 {
+
+        margin: 0 0 20px;
+
+        color: #111827;
+
+        font-size:
+            clamp(30px, 4vw, 44px);
+
+        line-height: 1.2;
+    }
+
+
+    .about-content h2 span {
+
+        color: #1d4fa3;
+    }
+
+
+    .about-content p {
+
+        margin: 0 0 18px;
+
+        color: #667085;
+
+        font-size: 16px;
+
+        line-height: 1.85;
+    }
+
+
+    .about-content strong {
+
+        color: #27334a;
+    }
+
+
+    /* =====================================================
+       VALUES
+    ===================================================== */
+
+    .values-section {
+
+        padding: 90px 0;
+
+        background: white;
+    }
+
+
+    .section-heading {
+
+        text-align: center;
+
+        margin-bottom: 50px;
+    }
+
+
+    .section-heading h2 {
+
+        margin: 0 0 12px;
+
+        color: #111827;
+
+        font-size: 38px;
+    }
+
+
+    .section-heading p {
+
+        max-width: 700px;
+
+        margin: auto;
+
+        color: #667085;
+
+        font-size: 17px;
+
+        line-height: 1.7;
+    }
+
+
+    .values-grid {
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 22px;
+    }
+
+
+    .value-card {
+
+        padding: 32px 26px;
+
+        background: #f8faff;
+
+        border:
+            1px solid #e6eaf2;
+
+        border-radius: 16px;
+
+        text-align: center;
+
+        transition:
+            transform .3s ease,
+            box-shadow .3s ease;
+    }
+
+
+    .value-card:hover {
+
+        transform:
+            translateY(-7px);
+
+        box-shadow:
+            0 18px 35px rgba(15,23,42,.09);
+    }
+
+
+    .value-icon {
+
+        width: 62px;
+        height: 62px;
+
+        margin: 0 auto 18px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        border-radius: 16px;
+
+        background: #eef3ff;
+
+        font-size: 28px;
+    }
+
+
+    .value-card h3 {
+
+        margin: 0 0 10px;
+
+        color: #172033;
+
+        font-size: 19px;
+    }
+
+
+    .value-card p {
+
+        margin: 0;
+
+        color: #667085;
+
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+
+    /* =====================================================
+       CONTACT / EXPERIENCE
+    ===================================================== */
+
+    .experience-section {
+
+        padding: 90px 0;
+
+        background: #f5f7fb;
+    }
+
+
+    .experience-grid {
+
+        display: grid;
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 35px;
+    }
+
+
+    .experience-card {
+
+        padding: 35px;
+
+        background: white;
+
+        border:
+            1px solid #e7eaf0;
+
+        border-radius: 18px;
+
+        box-shadow:
+            0 8px 28px rgba(15,23,42,.05);
+    }
+
+
+    .experience-card h2 {
+
+        margin: 0 0 22px;
+
+        color: #172033;
+
+        font-size: 27px;
+    }
+
+
+    .experience-card p {
+
+        color: #667085;
+
+        line-height: 1.8;
+
+        margin: 0 0 15px;
+    }
+
+
+    .skill-list {
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 12px;
+
+        margin-top: 20px;
+    }
+
+
+    .skill-item {
+
+        padding: 13px 15px;
+
+        border-radius: 10px;
+
+        background: #f1f5ff;
+
+        color: #34446a;
+
+        font-size: 14px;
+
+        font-weight: 600;
+    }
+
+
+    /* =====================================================
+       CONTACT DETAILS
+    ===================================================== */
+
+    .contact-details {
+
+        display: grid;
+
+        gap: 15px;
+
+        margin-top: 10px;
+    }
+
+
+    .contact-item {
+
+        display: flex;
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+        padding: 16px;
+
+        border-radius: 12px;
+
+        background: #f8faff;
+
+        border:
+            1px solid #e7ebf3;
+    }
+
+
+    .contact-icon {
+
+        width: 42px;
+        height: 42px;
+
+        flex-shrink: 0;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        border-radius: 10px;
+
+        background: #eef3ff;
+
+        font-size: 20px;
+    }
+
+
+    .contact-item strong {
+
+        display: block;
+
+        margin-bottom: 4px;
+
+        color: #172033;
+
+        font-size: 14px;
+    }
+
+
+    .contact-item a {
+
+        color: #315ca8;
+
+        font-size: 14px;
+
+        word-break: break-word;
+    }
+
+
+    .contact-item span {
+
+        color: #667085;
+
+        font-size: 14px;
+    }
+
+
+    /* =====================================================
+       MAP
+    ===================================================== */
+
+    .map-box {
+
+        margin-top: 25px;
+
+        overflow: hidden;
+
+        border-radius: 15px;
+
+        border:
+            1px solid #e2e7ef;
+
+        box-shadow:
+            0 8px 25px rgba(15,23,42,.07);
+    }
+
+
+    .map-box iframe {
+
+        width: 100%;
+
+        height: 250px;
+
+        border: 0;
+
+        display: block;
+    }
+
+
+    /* =====================================================
+       CTA
+    ===================================================== */
+
+    .about-cta {
+
+        padding: 90px 0;
+
+        background: white;
+    }
+
+
+    .cta-box {
+
+        width: min(900px, 92%);
+
+        margin: auto;
+
+        padding: 55px 30px;
+
+        text-align: center;
+
+        border-radius: 22px;
+
+        background:
+            linear-gradient(
+                135deg,
+                #101b44,
+                #1f408f
+            );
+
+        color: white;
+
+        box-shadow:
+            0 20px 45px rgba(15,23,42,.15);
+    }
+
+
+    .cta-box h2 {
+
+        margin: 0 0 15px;
+
+        font-size: 36px;
+    }
+
+
+    .cta-box p {
+
+        max-width: 650px;
+
+        margin: 0 auto 28px;
+
+        color: #dce4f8;
+
+        line-height: 1.7;
+    }
+
+
+    .cta-button {
+
+        display: inline-flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        min-height: 48px;
+
+        padding: 0 27px;
+
+        border-radius: 8px;
+
+        background: #ffd052;
+
+        color: #111827;
+
+        font-weight: 700;
+
+        text-decoration: none;
+
+        transition:
+            transform .25s ease,
+            background .25s ease;
+    }
+
+
+    .cta-button:hover {
+
+        transform:
+            translateY(-3px);
+
+        background: #ffe080;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    .about-footer {
+
+        padding: 28px 15px;
+
+        text-align: center;
+
+        background: #080f25;
+
+        color: #9faac2;
+
+        font-size: 14px;
+    }
+
+
+    .about-footer strong {
+
+        color: white;
+    }
+
+
+    /* =====================================================
+       TABLET
+    ===================================================== */
+
+    @media (max-width: 900px) {
+
+        .about-grid {
+
+            grid-template-columns: 1fr;
+
+            gap: 40px;
+        }
+
+
+        .about-image-box {
+
+            max-width: 650px;
+
+            margin: auto;
+        }
+
+
+        .values-grid {
+
+            grid-template-columns:
+                repeat(2, 1fr);
+        }
+
+
+        .experience-grid {
+
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+
+    /* =====================================================
+       MOBILE
+    ===================================================== */
+
+    @media (max-width: 700px) {
+
+        .about-hero {
+
+            min-height: 300px;
+        }
+
+
+        .about-hero-content {
+
+            padding: 55px 0;
+        }
+
+
+        .about-hero h1 {
+
+            font-size: 42px;
+        }
+
+
+        .about-hero p {
+
+            font-size: 16px;
+        }
+
+
+        .about-section,
+        .values-section,
+        .experience-section,
+        .about-cta {
+
+            padding: 65px 0;
+        }
+
+
+        .section-heading h2 {
+
+            font-size: 30px;
+        }
+
+
+        .values-grid {
+
+            grid-template-columns: 1fr;
+        }
+
+
+        .experience-card {
+
+            padding: 25px 22px;
+        }
+
+
+        .skill-list {
+
+            grid-template-columns: 1fr;
+        }
+
+
+        .about-image-decoration {
+
+            width: 65px;
+
+            height: 65px;
+
+            right: -8px;
+
+            bottom: -8px;
+        }
+
+
+        .cta-box h2 {
+
+            font-size: 29px;
+        }
+
+    }
+
+
+    /* =====================================================
+       SMALL MOBILE
+    ===================================================== */
+
+    @media (max-width: 420px) {
+
+        .about-hero h1 {
+
+            font-size: 36px;
+        }
+
+
+        .about-content h2 {
+
+            font-size: 30px;
+        }
+
+    }
+
+</style>
+
+
+</head>
+
+<body>
+
+
+<!-- =====================================================
+     REUSABLE HEADER
+===================================================== -->
+
+<div id="header"></div>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="about-hero">
+
+    <div class="about-hero-content">
+
+        <div class="about-badge">
+            MSS WEB SOLUTIONS
+        </div>
+
+
+        <h1>
+            About <span>Us</span>
+        </h1>
+
+
+        <p>
+            Creating practical digital solutions
+            that help businesses work smarter,
+            faster and more efficiently.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT CONTENT
+===================================================== -->
+
+<section class="about-section">
+
+    <div class="about-container">
+
+        <div class="about-grid">
+
+
+            <!-- IMAGE -->
+
+            <div class="about-image-box">
+
+                <img
+                    src="image/brainoption3_orig.png"
+                    alt="MSS Web Solutions">
+
+                <div class="about-image-decoration"></div>
+
+            </div>
+
+
+
+            <!-- CONTENT -->
+
+            <div class="about-content">
+
+                <div class="section-label">
+                    Who We Are
+                </div>
+
+
+                <h2>
+                    Building the <span>Web Solutions</span>
+                    Your Business Needs
+                </h2>
+
+
+                <p>
+                    We are based in <strong>Kolkata</strong>
+                    and are focused on providing practical
+                    and reliable digital solutions for our
+                    clients.
+                </p>
+
+
+                <p>
+                    We provide a complete range of web
+                    solutions, from <strong>website design
+                    and development</strong> to application
+                    development, deployment and maintenance.
+                </p>
+
+
+                <p>
+                    Our approach is based on
+                    <strong>dedication, sincerity and
+                    timely completion</strong> of projects.
+                    We work closely with our clients to
+                    understand their requirements and build
+                    solutions around their actual workflow.
+                </p>
+
+
+                <p>
+                    Continuous communication and
+                    customer satisfaction are important
+                    parts of our work. We aim to create
+                    custom-made solutions that are useful,
+                    maintainable and easy to use.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     VALUES
+===================================================== -->
+
+<section class="values-section">
+
+    <div class="about-container">
+
+
+        <div class="section-heading">
+
+            <h2>
+                Our Approach
+            </h2>
+
+            <p>
+                The principles that guide the way
+                we work with our clients and projects.
+            </p>
+
+        </div>
+
+
+
+        <div class="values-grid">
+
+
+            <div class="value-card">
+
+                <div class="value-icon">
+                    🎯
+                </div>
+
+                <h3>
+                    Client Focus
+                </h3>
+
+                <p>
+                    We understand your requirements
+                    and build solutions around your
+                    actual business needs.
+                </p>
+
+            </div>
+
+
+            <div class="value-card">
+
+                <div class="value-icon">
+                    🤝
+                </div>
+
+                <h3>
+                    Communication
+                </h3>
+
+                <p>
+                    Clear communication throughout
+                    development helps keep projects
+                    aligned with expectations.
+                </p>
+
+            </div>
+
+
+            <div class="value-card">
+
+                <div class="value-icon">
+                    ⚡
+                </div>
+
+                <h3>
+                    Timely Delivery
+                </h3>
+
+                <p>
+                    We focus on organized development
+                    and completing projects within the
+                    agreed requirements and timelines.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     EXPERIENCE / CONTACT
+===================================================== -->
+
+<section class="experience-section">
+
+    <div class="about-container">
+
+
+        <div class="experience-grid">
+
+
+            <!-- SKILLS -->
+
+            <div class="experience-card">
+
+                <h2>
+                    Experience & Skills
+                </h2>
+
+
+                <p>
+                    Our work covers web development,
+                    application design, hosting and
+                    business-oriented software solutions.
+                </p>
+
+
+                <div class="skill-list">
+
+                    <div class="skill-item">
+                        🌐 Web Development
+                    </div>
+
+                    <div class="skill-item">
+                        🎨 Web Design
+                    </div>
+
+                    <div class="skill-item">
+                        ☁️ Hosting
+                    </div>
+
+                    <div class="skill-item">
+                        🗄️ Database Solutions
+                    </div>
+
+                    <div class="skill-item">
+                        📱 Mobile Applications
+                    </div>
+
+                    <div class="skill-item">
+                        💻 Web Applications
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CONTACT -->
+
+            <div class="experience-card">
+
+                <h2>
+                    Contact Us
+                </h2>
+
+
+                <div class="contact-details">
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            ✉️
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Email
+                            </strong>
+
+                            <a
+                                href="mailto:manna.mithun@gmail.com">
+
+                                manna.mithun@gmail.com
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            📞
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Phone
+                            </strong>
+
+                            <a href="tel:8240581532">
+
+                                8240581532
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            📍
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Location
+                            </strong>
+
+                            <span>
+                                Kolkata, West Bengal, India
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- MAP -->
+
+                <div class="map-box">
+
+                    <iframe
+                        src="https://www.google.com/maps?q=22.572646,88.363895&z=15&output=embed"
+                        loading="lazy"
+                        allowfullscreen>
+                    </iframe>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="about-cta">
+
+    <div class="cta-box">
+
+        <h2>
+            Let's Build Something Useful
+        </h2>
+
+
+        <p>
+            Have an idea, business requirement or
+            application that you would like to develop?
+            Let's discuss your project.
+        </p>
+
+
+        <a
+            href="services.html"
+            class="cta-button">
+
+            View Our Services
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="about-footer">
+
+    © <span id="aboutYear"></span>
+
+    <strong>
+        MSS WEB SOLUTIONS
+    </strong>
+
+    · All Rights Reserved.
+
+</footer>
+
+
+
+<!-- =====================================================
+     REUSABLE HEADER
+===================================================== -->
+
+<script src="header.js"></script>
+
+
+<script>
+
+    document.getElementById(
+        "aboutYear"
+    ).textContent =
+        new Date().getFullYear();
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+      content="Contact MSS Web Solutions for professional website design, web development and business solutions.">
+
+<title>Contact - MSS WEB SOLUTIONS</title>
+
+<link rel="stylesheet" href="style.css">
+
+
+<style>
+
+/* =====================================================
+   CONTACT HERO
+===================================================== */
+
+.contact-hero {
+
+    min-height: 420px;
+
+    padding:
+        150px
+        20px
+        90px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(0,35,80,.78),
+            rgba(0,70,145,.78)
+        ),
+        url("image/business_orig.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+
+.contact-hero-content {
+
+    max-width: 850px;
+
+    margin: auto;
+
+}
+
+
+.contact-hero h1 {
+
+    margin: 0 0 20px;
+
+    font-size:
+        clamp(40px, 6vw, 65px);
+
+    line-height: 1.1;
+
+    font-weight: 800;
+
+}
+
+
+.contact-hero h1 span {
+
+    color: #65c8ff;
+
+}
+
+
+.contact-hero p {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: #edf6ff;
+
+}
+
+
+/* =====================================================
+   CONTACT SECTION
+===================================================== */
+
+.contact-section {
+
+    background: #f7f9fc;
+
+    padding: 80px 20px;
+
+}
+
+
+.contact-grid {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        380px
+        minmax(0,1fr);
+
+    gap: 30px;
+
+}
+
+
+/* =====================================================
+   CONTACT INFORMATION
+===================================================== */
+
+.info-card {
+
+    background: #102a43;
+
+    color: white;
+
+    padding: 40px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.15);
+
+}
+
+
+.info-card h2 {
+
+    margin:
+        0 0 15px;
+
+    font-size: 30px;
+
+}
+
+
+.info-card > p {
+
+    margin-bottom: 32px;
+
+    color: #d7e6f5;
+
+    line-height: 1.7;
+
+}
+
+
+.info-item {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    margin: 25px 0;
+
+}
+
+
+.info-icon {
+
+    min-width: 44px;
+
+    height: 44px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #1677ff;
+
+    font-size: 20px;
+
+}
+
+
+.info-item strong {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+}
+
+
+.info-item span {
+
+    display: block;
+
+    color: #d7e6f5;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+}
+
+
+.social-buttons {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 32px;
+
+}
+
+
+.social-buttons a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 42px;
+
+    padding: 0 18px;
+
+    border-radius: 8px;
+
+    color: white;
+
+    background: #1677ff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+}
+
+
+.social-buttons a.whatsapp {
+
+    background: #20b858;
+
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.form-card {
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.09);
+
+}
+
+
+.form-card h2 {
+
+    margin: 0 0 8px;
+
+    font-size: 30px;
+
+    color: #172b4d;
+
+}
+
+
+.form-card .subtitle {
+
+    margin:
+        0 0 30px;
+
+    color: #707b87;
+
+}
+
+
+.form-row {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 18px;
+
+}
+
+
+.form-group {
+
+    margin-bottom: 19px;
+
+}
+
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #344054;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+}
+
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+    width: 100%;
+
+    padding: 14px 15px;
+
+    border:
+        1px solid #d8dee7;
+
+    border-radius: 9px;
+
+    background: white;
+
+    color: #222;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: .2s;
+
+}
+
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+    border-color: #1677ff;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(22,119,255,.10);
+
+}
+
+
+.form-group textarea {
+
+    height: 130px;
+
+    resize: vertical;
+
+}
+
+
+.submit-btn {
+
+    width: 100%;
+
+    padding: 15px 20px;
+
+    border: 0;
+
+    border-radius: 9px;
+
+    background: #1677ff;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: .25s;
+
+}
+
+
+.submit-btn:hover {
+
+    background: #075ecf;
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+/* =====================================================
+   QUICK CONTACT
+===================================================== */
+
+.quick-contact {
+
+    background: #f7f9fc;
+
+    padding:
+        0
+        20px
+        80px;
+
+}
+
+
+.quick-grid {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 20px;
+
+}
+
+
+.quick-card {
+
+    background: white;
+
+    padding: 30px;
+
+    border:
+        1px solid #e8edf3;
+
+    border-radius: 14px;
+
+    text-align: center;
+
+    transition: .25s;
+
+}
+
+
+.quick-card:hover {
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(0,0,0,.08);
+
+}
+
+
+.quick-card .icon {
+
+    font-size: 32px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.quick-card h3 {
+
+    margin:
+        5px
+        0
+        8px;
+
+    color: #172b4d;
+
+}
+
+
+.quick-card p {
+
+    margin: 0;
+
+    color: #697586;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+}
+
+
+.quick-card a {
+
+    color: #1677ff;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .contact-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .quick-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .contact-hero {
+
+        min-height: 390px;
+
+        padding:
+            120px
+            18px
+            75px;
+
+    }
+
+
+    .contact-hero h1 {
+
+        font-size: 40px;
+
+    }
+
+
+    .contact-hero p {
+
+        font-size: 15px;
+
+    }
+
+
+    .contact-section {
+
+        padding:
+            55px
+            14px;
+
+    }
+
+
+    .info-card,
+    .form-card {
+
+        padding:
+            25px
+            20px;
+
+        border-radius: 14px;
+
+    }
+
+
+    .form-row {
+
+        grid-template-columns: 1fr;
+
+        gap: 0;
+
+    }
+
+
+    .info-card h2,
+    .form-card h2 {
+
+        font-size: 25px;
+
+    }
+
+
+    .quick-contact {
+
+        padding:
+            0
+            14px
+            60px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- =====================================================
+     REUSABLE HEADER
+===================================================== -->
+
+<div id="header"></div>
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="contact-hero">
+
+
+<div class="contact-hero-content">
+
+    <div class="hero-badge">
+        MSS WEB SOLUTIONS
+    </div>
+
+
+    <h1>
+
+        Get in
+        <span>Touch.</span>
+
+    </h1>
+
+
+    <p>
+
+        Have a project, idea, or requirement?
+
+        Send us a message and let us know how we
+        can help your business with web and
+        digital solutions.
+
+    </p>
+
+</div>
+
+
+</section>
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section class="contact-section">
+
+
+<div class="contact-grid">
+
+
+    <!-- =============================================
+         INFORMATION
+    ============================================== -->
+
+    <div class="info-card">
+
+        <h2>
+            Let's Talk
+        </h2>
+
+
+        <p>
+
+            Tell us about your requirement.
+
+            We will get back to you
+            as soon as possible.
+
+        </p>
+
+
+        <div class="info-item">
+
+            <div class="info-icon">
+                📧
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Email
+                </strong>
+
+                <span>
+                    Contact us through email
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="info-item">
+
+            <div class="info-icon">
+                📱
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Phone
+                </strong>
+
+                <span>
+                    Contact us by phone or WhatsApp
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="info-item">
+
+            <div class="info-icon">
+                📍
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Location
+                </strong>
+
+                <span>
+                    West Bengal, India
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="social-buttons">
+
+            <a
+                href="mailto:manna.mithun@gmail.com">
+
+                Email
+
+            </a>
+
+
+            <a
+                href="https://wa.me/8240581532"
+                target="_blank"
+                class="whatsapp">
+
+                WhatsApp
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =============================================
+         FORM
+    ============================================== -->
+
+    <div class="form-card">
+
+        <h2>
+            Send a Message
+        </h2>
+
+
+        <p class="subtitle">
+
+            Fill in the details below.
+
+        </p>
+
+
+        <form id="contactForm">
+
+
+            <div class="form-row">
+
+
+                <div class="form-group">
+
+                    <label>
+                        First Name *
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="firstName"
+                        required
+                        placeholder="First name">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Last Name
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="lastName"
+                        placeholder="Last name">
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label>
+                    Email *
+                </label>
+
+
+                <input
+                    type="email"
+                    id="email"
+                    required
+                    placeholder="YOUR_EMAIL@example.com">
+
+            </div>
+
+
+
+            <div class="form-row">
+
+
+                <div class="form-group">
+
+                    <label>
+                        Location *
+                    </label>
+
+
+                    <select
+                        id="location"
+                        required>
+
+
+                        <option value="">
+                            Select Location
+                        </option>
+
+
+                        <option>
+                            Andhra Pradesh
+                        </option>
+
+                        <option>
+                            Arunachal Pradesh
+                        </option>
+
+                        <option>
+                            Assam
+                        </option>
+
+                        <option>
+                            Bihar
+                        </option>
+
+                        <option>
+                            Chhattisgarh
+                        </option>
+
+                        <option>
+                            Goa
+                        </option>
+
+                        <option>
+                            Gujarat
+                        </option>
+
+                        <option>
+                            Haryana
+                        </option>
+
+                        <option>
+                            Himachal Pradesh
+                        </option>
+
+                        <option>
+                            Jammu & Kashmir
+                        </option>
+
+                        <option>
+                            Jharkhand
+                        </option>
+
+                        <option>
+                            Karnataka
+                        </option>
+
+                        <option>
+                            Kerala
+                        </option>
+
+                        <option>
+                            Madhya Pradesh
+                        </option>
+
+                        <option>
+                            Maharashtra
+                        </option>
+
+                        <option>
+                            Manipur
+                        </option>
+
+                        <option>
+                            Meghalaya
+                        </option>
+
+                        <option>
+                            Mizoram
+                        </option>
+
+                        <option>
+                            Nagaland
+                        </option>
+
+                        <option>
+                            Odisha
+                        </option>
+
+                        <option>
+                            Punjab
+                        </option>
+
+                        <option>
+                            Rajasthan
+                        </option>
+
+                        <option>
+                            Sikkim
+                        </option>
+
+                        <option>
+                            Tamil Nadu
+                        </option>
+
+                        <option>
+                            Telangana
+                        </option>
+
+                        <option>
+                            Tripura
+                        </option>
+
+                        <option>
+                            Uttarakhand
+                        </option>
+
+                        <option>
+                            Uttar Pradesh
+                        </option>
+
+                        <option>
+                            West Bengal
+                        </option>
+
+                        <option>
+                            Other Location
+                        </option>
+
+
+                    </select>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label>
+                        Contact Number
+                    </label>
+
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="Contact number">
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label>
+                    Message *
+                </label>
+
+
+                <textarea
+                    id="message"
+                    required
+                    placeholder="Tell us about your requirement..."></textarea>
+
+            </div>
+
+
+
+            <button
+                type="submit"
+                class="submit-btn">
+
+                Send Message
+
+            </button>
+
+
+        </form>
+
+    </div>
+
+
+</div>
+
+
+</section>
+
+<!-- =====================================================
+     QUICK CONTACT
+===================================================== -->
+
+<section class="quick-contact">
+
+
+<div class="quick-grid">
+
+
+    <div class="quick-card">
+
+        <div class="icon">
+            📧
+        </div>
+
+
+        <h3>
+            Email Us
+        </h3>
+
+
+        <p>
+
+            <a
+                href="mailto:manna.mithun@gmail.com">
+
+                manna.mithun@gmail.com
+
+            </a>
+
+        </p>
+
+    </div>
+
+
+
+    <div class="quick-card">
+
+        <div class="icon">
+            💬
+        </div>
+
+
+        <h3>
+            WhatsApp
+        </h3>
+
+
+        <p>
+
+            <a
+                href="https://wa.me/8240581532"
+                target="_blank">
+
+                Chat with us
+
+            </a>
+
+        </p>
+
+    </div>
+
+
+
+    <div class="quick-card">
+
+        <div class="icon">
+            🌐
+        </div>
+
+
+        <h3>
+            Web Solutions
+        </h3>
+
+
+        <p>
+
+            Websites, applications,
+            automation and digital solutions.
+
+        </p>
+
+    </div>
+
+
+</div>
+
+
+</section>
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+
+<p>
+
+    ©
+    <span id="year"></span>
+
+    <strong>
+        MSS WEB SOLUTIONS
+    </strong>.
+
+    All Rights Reserved.
+
+</p>
+
+
+</footer>
+
+<!-- =====================================================
+     REUSABLE HEADER
+===================================================== -->
+
+<script src="header.js"></script>
+
+<script>
+
+/* =====================================================
+   YEAR
+===================================================== */
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+
+/* =====================================================
+   CONTACT FORM
+===================================================== */
+
+document
+    .getElementById("contactForm")
+    .addEventListener(
+        "submit",
+        function(event) {
+
+            event.preventDefault();
+
+
+            const first =
+                document
+                    .getElementById("firstName")
+                    .value
+                    .trim();
+
+
+            const last =
+                document
+                    .getElementById("lastName")
+                    .value
+                    .trim();
+
+
+            const email =
+                document
+                    .getElementById("email")
+                    .value
+                    .trim();
+
+
+            const location =
+                document
+                    .getElementById("location")
+                    .value;
+
+
+            const phone =
+                document
+                    .getElementById("phone")
+                    .value
+                    .trim();
+
+
+            const message =
+                document
+                    .getElementById("message")
+                    .value
+                    .trim();
+
+
+            const subject =
+                "Website Contact - MSS WEB SOLUTIONS";
+
+
+            const body =
+
+                "Name: "
+                + first
+                + " "
+                + last
+
+                + "\nEmail: "
+                + email
+
+                + "\nLocation: "
+                + location
+
+                + "\nContact Number: "
+                + phone
+
+                + "\n\nMessage:\n"
+                + message;
+
+
+            /*
+             * Replace with your actual
+             * business email address.
+             */
+
+            window.location.href =
+
+                "mailto:YOUR_EMAIL@example.com"
+
+                + "?subject="
+                + encodeURIComponent(subject)
+
+                + "&body="
+                + encodeURIComponent(body);
+
+        }
+    );
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Admin - Ticket System</title>
+
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+<header class="header">
+
+
+<div class="logo">
+    📊 Admin Dashboard
+</div>
+
+<nav class="desktop-nav">
+
+    <a href="index.html">Home</a>
+    <a href="engineer.html">Engineer</a>
+    <a href="punch.html">Punch In/Out</a>
+
+    <a class="active"
+       href="admin.html">
+        Admin
+    </a>
+
+    <a href="search.html">Search</a>
+
+</nav>
+
+<button class="mobile-menu-btn"
+        onclick="toggleMobileMenu()">
+    ☰
+</button>
+
+
+</header>
+
+<nav id="mobileNav" class="mobile-nav">
+
+
+<a href="index.html">🏠 Home</a>
+<a href="engineer.html">👨‍🔧 Engineer</a>
+<a href="punch.html">📍 Punch In/Out</a>
+<a href="admin.html">📊 Admin</a>
+<a href="search.html">🔍 Search</a>
+
+
+</nav>
+
+<main class="container">
+
+
+<h1 class="page-title">
+    Admin Dashboard
+</h1>
+
+<p class="page-subtitle">
+    Engineer activity overview
+</p>
+
+
+<div class="grid">
+
+    <div class="card stat-card">
+
+        <div class="stat-icon">
+            👨‍🔧
+        </div>
+
+        <div>
+            <div class="stat-number">
+                12
+            </div>
+
+            <div class="stat-label">
+                Total Engineers
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="card stat-card">
+
+        <div class="stat-icon">
+            🟢
+        </div>
+
+        <div>
+            <div class="stat-number">
+                8
+            </div>
+
+            <div class="stat-label">
+                Active
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="card stat-card">
+
+        <div class="stat-icon">
+            🔴
+        </div>
+
+        <div>
+            <div class="stat-number">
+                4
+            </div>
+
+            <div class="stat-label">
+                Offline
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="card"
+     style="margin-top:20px;">
+
+    <h2>
+        Engineer Status
+    </h2>
+
+    <div class="table-wrapper">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Engineer</th>
+                    <th>ID</th>
+                    <th>Location</th>
+                    <th>Last Update</th>
+                    <th>Status</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>Engineer 01</td>
+
+                    <td>ENG-001</td>
+
+                    <td>Kolkata</td>
+
+                    <td>10:30 AM</td>
+
+                    <td>
+                        <span class="status status-active">
+                            Active
+                        </span>
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>Engineer 02</td>
+
+                    <td>ENG-002</td>
+
+                    <td>Howrah</td>
+
+                    <td>10:27 AM</td>
+
+                    <td>
+                        <span class="status status-active">
+                            Active
+                        </span>
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>Engineer 03</td>
+
+                    <td>ENG-003</td>
+
+                    <td>—</td>
+
+                    <td>Yesterday</td>
+
+                    <td>
+                        <span class="status status-closed">
+                            Offline
+                        </span>
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+
+</main>
+
+<footer class="footer">
+    © 2026 Ticket System
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

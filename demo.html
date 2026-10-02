@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+   content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+   content="MSS Web Solutions">
+
+<title>MSS WEB SOLUTIONS</title>
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background: #f5f7fb;
+    color: #172033;
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 74px;
+
+    z-index: 1000;
+
+    background:
+        rgba(255,255,255,.97);
+
+    border-bottom:
+        1px solid #e7eaf0;
+
+    box-shadow:
+        0 3px 18px rgba(15,23,42,.08);
+}
+
+
+.nav-container {
+
+    width: min(1200px, 94%);
+
+    height: 74px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo {
+
+    text-decoration: none;
+
+    color: #172033;
+
+    font-size: 20px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    white-space: nowrap;
+}
+
+.logo span {
+
+    color: #1d4fa3;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.nav button {
+
+    border: none;
+
+    background: transparent;
+
+    color: #344054;
+
+    padding: 10px 14px;
+
+    border-radius: 8px;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background .25s ease,
+        color .25s ease,
+        transform .25s ease;
+}
+
+
+.nav button:hover {
+
+    background: #eef3ff;
+
+    color: #1d4fa3;
+
+    transform: translateY(-1px);
+}
+
+
+.nav button.active {
+
+    background: #1d4fa3;
+
+    color: white;
+
+    box-shadow:
+        0 5px 14px rgba(29,79,163,.22);
+}
+
+
+/* =====================================================
+   MOBILE MENU BUTTON
+===================================================== */
+
+.menu-btn {
+
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #1d4fa3;
+
+    color: white;
+
+    font-size: 21px;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   HOME
+===================================================== */
+
+#home {
+
+    position: fixed;
+
+    top: 74px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 30px;
+
+    overflow: auto;
+
+    background: #f5f7fb;
+}
+
+
+#home.hidden {
+
+    display: none;
+}
+
+
+/* =====================================================
+   HOME CARD
+===================================================== */
+
+.card {
+
+    width: min(700px, 100%);
+
+    margin: 30px auto;
+
+    padding: 30px;
+
+    background: white;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 8px 30px rgba(15,23,42,.08);
+}
+
+
+.card h2 {
+
+    margin-top: 0;
+}
+
+
+.card p {
+
+    color: #667085;
+
+    margin-bottom: 25px;
+}
+
+
+/* =====================================================
+   HOME BUTTONS
+===================================================== */
+
+.btn {
+
+    border: none;
+
+    background: #1d4fa3;
+
+    color: white;
+
+    padding: 13px 18px;
+
+    border-radius: 8px;
+
+    font-family: inherit;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.btn:hover {
+
+    background: #163d80;
+}
+
+
+.btn-full {
+
+    width: 100%;
+
+    margin-top: 10px;
+}
+
+
+/* =====================================================
+   APPLICATION AREA
+===================================================== */
+
+.app-container {
+
+    display: none;
+
+    position: fixed;
+
+    top: 74px;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: #f5f7fb;
+}
+
+
+.app-container.show {
+
+    display: block;
+}
+
+
+#appFrame {
+
+    width: 100%;
+    height: 100%;
+
+    border: none;
+
+    display: block;
+
+    background: white;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 850px) {
+
+    .header {
+
+        height: 65px;
+    }
+
+
+    .nav-container {
+
+        height: 65px;
+
+        width: 100%;
+
+        padding: 0 15px;
+    }
+
+
+    .logo {
+
+        font-size: 17px;
+    }
+
+
+    .menu-btn {
+
+        display: block;
+    }
+
+
+    .nav {
+
+        display: none;
+
+        position: absolute;
+
+        top: 65px;
+
+        left: 0;
+        right: 0;
+
+        padding: 10px 14px 15px;
+
+        background: white;
+
+        border-bottom:
+            1px solid #e7eaf0;
+
+        box-shadow:
+            0 10px 25px rgba(15,23,42,.12);
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 5px;
+    }
+
+
+    .nav.show {
+
+        display: flex;
+    }
+
+
+    .nav button {
+
+        width: 100%;
+
+        text-align: left;
+
+        padding: 13px 15px;
+
+        font-size: 14px;
+    }
+
+
+    #home {
+
+        top: 65px;
+
+        padding: 15px;
+    }
+
+
+    .app-container {
+
+        top: 65px;
+    }
+
+
+    .card {
+
+        margin: 15px auto;
+
+        padding: 22px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 450px) {
+
+    .logo {
+
+        font-size: 15px;
+
+        letter-spacing: .5px;
+    }
+
+
+    .menu-btn {
+
+        width: 40px;
+        height: 40px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+  /* =====================================================
+           MAIN
+        ===================================================== */
+
+        .services-section {
+
+            padding: 90px 0;
+        }
+
+
+        .services-container {
+
+            width: min(1180px, 92%);
+
+            margin: auto;
+        }
+
+
+        .section-heading {
+
+            text-align: center;
+
+            margin-bottom: 50px;
+        }
+
+
+        .section-heading h2 {
+
+            margin: 0 0 12px;
+
+            font-size: 38px;
+
+            color: #111827;
+        }
+
+
+        .section-heading p {
+
+            max-width: 700px;
+
+            margin: auto;
+
+            color: #667085;
+
+            font-size: 17px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           SERVICE CARDS
+        ===================================================== */
+
+        .services-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 22px;
+        }
+
+
+        .service-card {
+
+            position: relative;
+
+            padding: 30px 26px;
+
+            background: white;
+
+            border:
+                1px solid #e7eaf0;
+
+            border-radius: 16px;
+
+            box-shadow:
+                0 8px 28px rgba(15,23,42,.055);
+
+            transition:
+                transform .3s ease,
+                box-shadow .3s ease,
+                border-color .3s ease;
+        }
+
+
+        .service-card:hover {
+
+            transform:
+                translateY(-7px);
+
+            box-shadow:
+                0 18px 40px rgba(15,23,42,.11);
+
+            border-color:
+                #d7def0;
+        }
+
+
+        .service-icon {
+
+            width: 58px;
+            height: 58px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 14px;
+
+            background:
+                #eef3ff;
+
+            font-size: 27px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .service-card h3 {
+
+            margin: 0 0 10px;
+
+            font-size: 19px;
+
+            color: #172033;
+        }
+
+
+        .service-card p {
+
+            margin: 0;
+
+            color: #667085;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+        }
+
+
+</style>
+
+</head>
+
+<body>
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="header">
+
+
+<div class="nav-container">
+
+
+    <!-- LOGO -->
+
+    <a
+        href="javascript:void(0)"
+        class="logo"
+        onclick="showHome()">
+
+        MSS <span>WEB SOLUTIONS</span>
+
+    </a>
+
+
+    <!-- NAVIGATION -->
+
+    <nav
+        id="mainNav"
+        class="nav">
+
+ <!-- HOME -->
+<button
+    class="active"
+    onclick="window.location.href='index.html'">
+
+    🏠 Home
+
+</button>
+
+
+        <!-- Dashboard -->
+
+        <button
+            id="homeBtn"
+            class="active"
+            type="button"
+            onclick="showHome()">
+
+            📊 Dashboard
+
+        </button>
+
+
+        <!-- MVS -->
+
+        <button
+            type="button"
+            onclick="openPage('mvs', this)">
+
+            👨‍🔧 MVS
+
+        </button>
+
+
+        <!-- IN / OUT -->
+
+        <button
+            type="button"
+            onclick="openPage('inout', this)">
+
+            🗺️ In / Out
+
+        </button>
+
+
+        <!-- TRACKER -->
+
+        <button
+            type="button"
+            onclick="openPage('tracker', this)">
+
+            📍 Tracker
+
+        </button>
+
+
+        <!-- ADMIN -->
+
+        <button
+            type="button"
+            onclick="openPage('admin', this)">
+
+            🛠️ Admin
+
+        </button>
+
+
+    </nav>
+
+
+    <!-- MOBILE BUTTON -->
+
+    <button
+        class="menu-btn"
+        type="button"
+        onclick="toggleMenu()"
+        aria-label="Open Menu">
+
+        ☰
+
+    </button>
+
+
+</div>
+
+
+</header>
+
+<!-- =====================================================
+     HOME
+===================================================== -->
+
+<section id="home">
+
+
+      <div class="services-container">
+
+
+            <div class="section-heading">
+
+                <h2>
+                    What We Can Build For You
+                </h2>
+
+                <p>
+                    From business management systems to
+                    mobile applications and professional
+                    websites, we create solutions that
+                    simplify everyday operations.
+                </p>
+
+            </div>
+
+
+
+            <div class="services-grid">
+
+
+                <!-- 1 -->
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        📦
+                    </div>
+
+                    <h3>
+                        Assets / Store Management
+                    </h3>
+
+                    <p>
+                        Track assets, inventory, stores,
+                        stock movements and business
+                        resources from one centralized system.
+                    </p>
+					
+					<button
+                    class="btn btn-full"
+                    type="button"
+                    onclick="openPage('mvs', null)">
+
+                   🧑 View MVS Demo
+
+                   </button>
+
+                </div>
+
+
+                <!-- 2 -->
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        📍
+                    </div>
+
+                    <h3>
+                        Attendance Management
+                    </h3>
+
+                    <p>
+                        Employee attendance, punch in/out,
+                        location tracking, history and
+                        attendance reporting.
+                    </p>
+					
+					<button
+                    class="btn btn-full"
+                    type="button"
+                    onclick="openPage('inout', this)">
+
+                   🧑 View Attendance Demo
+
+                   </button>
+
+                </div>
+
+
+                <!-- 3 -->
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        👥
+                    </div>
+
+                    <h3>
+                        HRMS
+                    </h3>
+
+                    <p>
+                        Human resource management solutions
+                        for employee information, attendance,
+                        leave and business administration.
+                    </p>
+					
+					<button
+                    class="btn btn-full"
+                    type="button"
+                    onclick="openPage('tracker', this)">
+
+                   🧑 View Location Traker Demo
+
+                   </button>
+
+                </div>
+
+
+                <!-- 4 -->
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        💳
+                    </div>
+
+                    <h3>
+                        Billing Management
+                    </h3>
+
+                    <p>
+                        Manage billing, invoices, customers
+                        and business transactions through
+                        an easy-to-use application.
+                    </p>
+
+                </div>
+
+
+                <!-- 5 -->
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        🩺
+                    </div>
+
+                    <h3>
+                        Doctor Clinic Management
+                    </h3>
+
+                    <p>
+                        Patient, appointment, token and
+                        clinic workflow management solutions.
+                    </p>
+
+                </div>
+
+
+                <!-- 6 -->
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        🎫
+                    </div>
+
+                    <h3>
+                        Token System
+                    </h3>
+
+                    <p>
+                        Digital token and queue management
+                        systems for clinics, offices and
+                        service centers.
+                    </p>
+
+                </div>
+
+
+                <!-- 7 -->
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        📱
+                    </div>
+
+                    <h3>
+                        Mobile Application
+                    </h3>
+
+                    <p>
+                        Responsive and mobile-friendly
+                        applications for customers,
+                        employees and business operations.
+                    </p>
+
+                </div>
+
+
+                <!-- 8 -->
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        📅
+                    </div>
+
+                    <h3>
+                        Booking & Reservations
+                    </h3>
+
+                    <p>
+                        Booking, reservation, availability
+                        and scheduling systems for different
+                        types of businesses.
+                    </p>
+
+                </div>
+
+
+                <!-- 9 -->
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        💻
+                    </div>
+
+                    <h3>
+                        Web Applications
+                    </h3>
+
+                    <p>
+                        Custom web applications and business
+                        software designed around your workflow.
+                    </p>
+
+                </div>
+
+
+                <!-- 10 -->
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        📋
+                    </div>
+
+                    <h3>
+                        Business Directory
+                    </h3>
+
+                    <p>
+                        Business listing and directory
+                        platforms for organizing services,
+                        companies and contact information.
+                    </p>
+
+                </div>
+
+
+                <!-- 11 -->
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        🌐
+                    </div>
+
+                    <h3>
+                        Web Design
+                    </h3>
+
+                    <p>
+                        Professional, responsive websites
+                        optimized for desktop, tablet and
+                        mobile devices.
+                    </p>
+
+                </div>
+
+
+                <!-- 12 -->
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        ☁️
+                    </div>
+
+                    <h3>
+                        Hosting & Deployment
+                    </h3>
+
+                    <p>
+                        Website deployment and hosting
+                        solutions for your online presence.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+</section>
+
+<!-- =====================================================
+     APPLICATION IFRAME
+===================================================== -->
+
+<main
+    id="appContainer"
+    class="app-container">
+
+
+<iframe
+    id="appFrame"
+    title="Engineer Application"
+    allow="geolocation; camera; microphone">
+</iframe>
+
+
+</main>
+
+<script>
+
+/* =====================================================
+   GOOGLE APPS SCRIPT URLS
+===================================================== */
+
+const APP_URL =
+"https://script.google.com/macros/s/AKfycby2uLha-AAkXBoEv7QlvRugE1cRj81Uv3CBt8N4BIVzgt4SMb9zkL7noU0UjzNnebi3/exec";
+
+
+const APP_URL2 =
+"https://script.google.com/macros/s/AKfycbxXA4w-zhbu8YufoxJaA1e5o8w9FoexbzCSQ-9C9x5IFQBfUGc2QxlH4vFZ0dMHqTi5/exec";
+
+
+const APP_URL3 =
+"https://script.google.com/macros/s/AKfycbzyB2Oog05ZAQ9Fd0XC1-YOveU5ZKKfYv8r-AGO-R-HDmMuV8nhYgekPSeTHXRElKRfCA/exec";
+
+
+/* =====================================================
+   STARTUP
+===================================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    showHome();
+
+});
+
+
+/* =====================================================
+   SHOW HOME
+===================================================== */
+
+function showHome() {
+
+    const home =
+        document.getElementById("home");
+
+    const container =
+        document.getElementById("appContainer");
+
+    const frame =
+        document.getElementById("appFrame");
+
+    const nav =
+        document.getElementById("mainNav");
+
+
+    /* Show Home */
+
+    home.classList.remove("hidden");
+
+
+    /* Hide iframe */
+
+    container.classList.remove("show");
+
+
+    /* Optional: unload iframe */
+
+    frame.src = "about:blank";
+
+
+    /* Home active */
+
+    setActiveButton(
+        document.getElementById("homeBtn")
+    );
+
+
+    /* Close mobile menu */
+
+    nav.classList.remove("show");
+
+}
+
+
+/* =====================================================
+   OPEN APPLICATION PAGE
+===================================================== */
+
+function openPage(page, button) {
+
+    const home =
+        document.getElementById("home");
+
+    const container =
+        document.getElementById("appContainer");
+
+    const frame =
+        document.getElementById("appFrame");
+
+    const nav =
+        document.getElementById("mainNav");
+
+
+    let url = APP_URL;
+
+
+    /* =================================================
+       MVS
+    ================================================= */
+
+    if (page === "mvs") {
+
+        url = APP_URL;
+
+    }
+
+
+    /* =================================================
+       IN / OUT
+    ================================================= */
+
+    else if (page === "inout") {
+
+        url = APP_URL2;
+
+    }
+
+
+    /* =================================================
+       TRACKER
+    ================================================= */
+
+    else if (page === "tracker") {
+
+        url = APP_URL3;
+
+    }
+
+
+    /* =================================================
+       ADMIN
+    ================================================= */
+
+    else if (page === "admin") {
+
+        url =
+            APP_URL3 +
+            "?page=admin";
+
+    }
+
+
+    /* =================================================
+       HOME DASHBOARD BUTTONS
+    ================================================= */
+
+    else if (page === "spare") {
+
+        /*
+         * Change this URL if Spare has
+         * a separate Apps Script.
+         */
+
+        url = APP_URL;
+
+    }
+
+
+    else if (page === "calendar") {
+
+        /*
+         * Change this URL if Calendar has
+         * a separate Apps Script.
+         */
+
+        url = APP_URL;
+
+    }
+
+
+    /* =================================================
+       HIDE HOME
+    ================================================= */
+
+    home.classList.add("hidden");
+
+
+    /* =================================================
+       SHOW IFRAME
+    ================================================= */
+
+    container.classList.add("show");
+
+
+    /* =================================================
+       LOAD APPLICATION
+    ================================================= */
+
+    frame.src = url;
+
+
+    /* =================================================
+       ACTIVE MENU
+    ================================================= */
+
+    if (button) {
+
+        setActiveButton(button);
+
+    }
+    else {
+
+        clearActiveButtons();
+
+    }
+
+
+    /* =================================================
+       CLOSE MOBILE MENU
+    ================================================= */
+
+    nav.classList.remove("show");
+
+}
+
+
+/* =====================================================
+   ACTIVE MENU BUTTON
+===================================================== */
+
+function clearActiveButtons() {
+
+    document
+        .querySelectorAll(".nav button")
+        .forEach(function(btn) {
+
+            btn.classList.remove("active");
+
+        });
+
+}
+
+
+function setActiveButton(button) {
+
+    clearActiveButtons();
+
+    if (button) {
+
+        button.classList.add("active");
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+function toggleMenu() {
+
+    const nav =
+        document.getElementById("mainNav");
+
+    nav.classList.toggle("show");
+
+}
+
+
+/* =====================================================
+   CLOSE MENU WHEN CLICKING OUTSIDE
+===================================================== */
+
+document.addEventListener(
+    "click",
+    function(event) {
+
+        const nav =
+            document.getElementById("mainNav");
+
+        const menuBtn =
+            document.querySelector(".menu-btn");
+
+
+        if (
+            nav.classList.contains("show") &&
+            !nav.contains(event.target) &&
+            !menuBtn.contains(event.target)
+        ) {
+
+            nav.classList.remove("show");
+
+        }
+
+    }
+);
+
+</script>
+
+</body>
+
+</html>

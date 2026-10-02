@@ -1,199 +1,416 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
 
-  <title>Engineer Application </title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+    <meta name="description"
+          content="MSS Web Solutions - Professional website design, web development and business solutions.">
 
-    html, body {
-      margin: 0;
-      width: 100%;
-      height: 100%;
-      font-family: Arial, sans-serif;
-      overflow: hidden;
-    }
+    <title>MSS WEB SOLUTIONS</title>
 
-    /* MENU */
-    .menu {
-      height: 55px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 12px;
-      background: #1a73e8;
-    }
+    <link rel="stylesheet" href="style.css">
 
-    .menu button {
-      border: none;
-      background: transparent;
-      color: white;
-      padding: 10px 16px;
-      font-size: 15px;
-      font-weight: bold;
-      border-radius: 6px;
-      cursor: pointer;
-    }
+    <style>
 
-    .menu button:hover {
-      background: rgba(255,255,255,0.18);
-    }
 
-    .menu button.active {
-      background: white;
-      color: #1a73e8;
-    }
+    </style>
 
-    /* CONTENT */
-    .content {
-      height: calc(100vh - 55px);
-      width: 100%;
-    }
-
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-      display: block;
-    }
-	
-#footer,
-.wsite-footer {
-    display: none !important;
-}
-
-#main {
-    min-height: 100vh !important;
-}
-
-  </style>
 </head>
+
 
 <body>
 
-  <div class="menu">
 
-    <button
-      class="active"
-      onclick="openPage('home', this)">
-      🏠 Home
-    </button>
+    <!-- =====================================================
+         REUSABLE HEADER
+    ====================================================== -->
 
-    <button
-      onclick="openPage('mvs', this)">
-      👨‍🔧 MVS
-    </button>
-
-    <button
-      onclick="openPage('inout', this)">
-      🗺️ In out
-    </button>
-	
-	 <button
-      onclick="openPage('tracker', this)">
-      👨‍🔧 Tracker
-    </button>
-
-    <button
-      onclick="openPage('admin', this)">
-      🗺️ Admin
-    </button>
-
-  </div>
-
-  <div class="content">
-
-    <iframe
-      id="appFrame"
-      allow="geolocation; camera; microphone"
-      src="https://script.google.com/macros/s/AKfycby2uLha-AAkXBoEv7QlvRugE1cRj81Uv3CBt8N4BIVzgt4SMb9zkL7noU0UjzNnebi3/exec">
-    </iframe>
-
-  </div>
-
-  <script>
-
-    /* GOOGLE APPS SCRIPT URLS */
-
-    const APP_URL =
-      "https://script.google.com/macros/s/AKfycby2uLha-AAkXBoEv7QlvRugE1cRj81Uv3CBt8N4BIVzgt4SMb9zkL7noU0UjzNnebi3/exec";
-
-    const APP_URL2 =
-      "https://script.google.com/macros/s/AKfycbxXA4w-zhbu8YufoxJaA1e5o8w9FoexbzCSQ-9C9x5IFQBfUGc2QxlH4vFZ0dMHqTi5/exec";
-
-    const APP_URL3 =
-      "https://script.google.com/macros/s/AKfycbzyB2Oog05ZAQ9Fd0XC1-YOveU5ZKKfYv8r-AGO-R-HDmMuV8nhYgekPSeTHXRElKRfCA/exec";
+    <div id="header"></div>
 
 
 
-    /* OPEN PAGE */
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
 
-    function openPage(page, button) {
+    <section class="hero">
 
-      const frame =
-        document.getElementById("appFrame");
+        <div class="container">
 
-      let url = APP_URL;
+            <div class="hero-content">
 
-
-      /* HOME */
-
-      if (page === "home") {
-        url = APP_URL;
-      }
+                <div class="hero-badge">
+                    MSS WEB SOLUTIONS
+                </div>
 
 
-      /* MVS */
-
-      else if (page === "mvs") {
-        url = APP_URL;
-      }
-
-
-      /* IN / OUT */
-
-      else if (page === "inout") {
-        url = APP_URL2;
-      }
+                <h1>
+                    Websites that
+                    <span>work for you.</span>
+                </h1>
 
 
-      /* TRACKER */
-
-      else if (page === "tracker") {
-        url = APP_URL3;
-      }
-
-
-      /* ADMIN */
-
-      else if (page === "admin") {
-        url = APP_URL3 + "?page=admin";
-      }
+                <p>
+                    Websites promote you 24/7.
+                    No employee will do that.
+                    We build modern, professional and
+                    business-focused web solutions designed
+                    to give your organization a stronger
+                    digital presence.
+                </p>
 
 
-      /* LOAD IFRAME */
+                <div class="hero-buttons">
 
-      frame.src = url;
-
-
-      /* ACTIVE MENU */
-
-      document
-        .querySelectorAll(".menu button")
-        .forEach(function(btn) {
-          btn.classList.remove("active");
-        });
+                    <a href="demo.html"
+                       class="btn btn-primary">
+                        Explore Our Projects
+                    </a>
 
 
-      button.classList.add("active");
+                    <a href="about-us.html"
+                       class="btn btn-outline">
+                        Learn More
+                    </a>
 
-    }
-  </script>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PORTFOLIO
+    ====================================================== -->
+
+    <section class="section portfolio-section">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                My Portfolio
+            </h2>
+
+            <p class="section-subtitle">
+                Explore some of our latest projects,
+                applications and web solutions.
+            </p>
+
+
+            <div class="portfolio-image">
+
+                <img
+                    src="image/portfolio_orig.png"
+                    alt="MSS Web Solutions Portfolio">
+
+            </div>
+
+
+
+            <!-- DEMO PROJECTS -->
+
+            <div class="demo-grid">
+
+
+                <!-- CARD 1 -->
+
+                <div class="demo-card">
+
+                    <div class="demo-icon">
+                        🎫
+                    </div>
+
+                    <h3>
+                        Ticket Management
+                    </h3>
+
+                    <p>
+                        A modern ticket management
+                        and service tracking application.
+                    </p>
+
+                    <a
+                        href="https://script.google.com/macros/s/AKfycbx_paCUG1g4OAY_qJPBGZ_1xgn44kQb3MqLQiiMKMNWwtbLwZ6a27zWkdLfBivxWZ7l/exec"
+                        target="_blank"
+                        class="card-button">
+
+                        Login For Demo
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- CARD 2 -->
+
+                <div class="demo-card">
+
+                    <div class="demo-icon">
+                        📋
+                    </div>
+
+                    <h3>
+                        Dynamic Form
+                    </h3>
+
+                    <p>
+                        Flexible online forms for
+                        collecting and managing business data.
+                    </p>
+
+                    <a
+                        href="https://script.google.com/macros/s/AKfycbzYdtJ-lycZxyb3I-Ac0N8Gx-kIE4yOjhbd7io0d6YU0l2UWSUFnc97URcF6TeQogpp/exec"
+                        target="_blank"
+                        class="card-button">
+
+                        Open Demo
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- CARD 3 -->
+
+                <div class="demo-card">
+
+                    <div class="demo-icon">
+                        💻
+                    </div>
+
+                    <h3>
+                        Our Products
+                    </h3>
+
+                    <p>
+                        Explore our collection of
+                        applications and digital products.
+                    </p>
+
+                    <a
+                        href="https://mithun98361367.github.io/main/"
+                        target="_blank"
+                        class="card-button">
+
+                        View Products
+
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ABOUT
+    ====================================================== -->
+
+    <section class="section about-section">
+
+        <div class="container">
+
+            <div class="about-grid">
+
+
+                <div class="about-image">
+
+                    <img
+                        src="image/tell.png"
+                        alt="MSS Web Solutions">
+
+                </div>
+
+
+
+                <div class="about-content">
+
+                    <h2>
+                        A Little About Us
+                    </h2>
+
+
+                    <p>
+                        We offer innovative website design
+                        and web development solutions that
+                        focus on enhancing the value of our
+                        web clients' businesses.
+                    </p>
+
+
+                    <p>
+                        We understand that our clients'
+                        goals are our goals. Therefore, we
+                        take a web design approach that
+                        aligns with the online vision and
+                        business needs of our clients.
+                    </p>
+
+
+                    <p>
+                        Our solutions are designed to provide
+                        a stronger web presence and a
+                        competitive edge through innovative,
+                        efficient and cost-effective technology.
+                    </p>
+
+
+
+                    <div class="features">
+
+                        <div class="feature">
+
+                            <strong>
+                                🚀 Modern
+                            </strong>
+
+                            <span>
+                                Modern responsive websites.
+                            </span>
+
+                        </div>
+
+
+                        <div class="feature">
+
+                            <strong>
+                                ⚡ Efficient
+                            </strong>
+
+                            <span>
+                                Fast and practical solutions.
+                            </span>
+
+                        </div>
+
+
+                        <div class="feature">
+
+                            <strong>
+                                💡 Innovative
+                            </strong>
+
+                            <span>
+                                Technology focused on results.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <br>
+
+
+                    <a
+                        href="about-us.html"
+                        class="btn btn-primary">
+
+                        Learn More
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CONTACT
+    ====================================================== -->
+
+    <section class="section contact-section">
+
+        <div class="container">
+
+            <div class="contact-box">
+
+                <h2 class="section-title">
+                    Get In Touch
+                </h2>
+
+
+                <p>
+                    It's our commitment to build and deliver
+                    well-developed web solutions that generate
+                    solid results for our clients.
+                </p>
+
+
+                <p>
+                    Our services cater to the specific needs
+                    of every client, helping organizations
+                    create a stronger digital presence.
+                </p>
+
+
+                <a
+                    href="contact.html"
+                    class="btn btn-primary">
+
+                    Contact Us
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <p>
+            © <span id="year"></span>
+            <strong>MSS WEB SOLUTIONS</strong>.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         REUSABLE HEADER COMPONENT
+    ====================================================== -->
+
+    <script src="header.js"></script>
+
+
+    <script>
+
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+    </script>
+
 
 </body>
+
 </html>

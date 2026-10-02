@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="MSS Web Solutions - Website design, business software, attendance, HRMS, billing, booking and web application services.">
+
+    <title>Services - MSS WEB SOLUTIONS</title>
+
+    <link rel="stylesheet" href="style.css">
+
+
+    <style>
+
+        /* =====================================================
+           SERVICES PAGE
+        ===================================================== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+            margin: 0;
+            font-family:
+                "Segoe UI",
+                Arial,
+                sans-serif;
+
+            background: #f5f7fb;
+            color: #172033;
+        }
+
+
+        /* =====================================================
+           PAGE HERO
+        ===================================================== */
+
+        .services-hero {
+
+            min-height: 330px;
+
+            display: flex;
+
+            align-items: center;
+
+            position: relative;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(7,18,48,.95),
+                    rgba(17,43,105,.82)
+                ),
+                url("image/background-images/221119437.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+
+            color: white;
+        }
+
+
+        .services-hero-content {
+
+            width: min(1180px, 92%);
+
+            margin: auto;
+
+            text-align: center;
+
+            padding: 65px 0;
+        }
+
+
+        .services-badge {
+
+            display: inline-block;
+
+            padding: 7px 18px;
+
+            border:
+                1px solid rgba(255,255,255,.3);
+
+            border-radius: 50px;
+
+            color: #ffd052;
+
+            background:
+                rgba(255,255,255,.08);
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 18px;
+        }
+
+
+        .services-hero h1 {
+
+            margin: 0 0 15px;
+
+            font-size:
+                clamp(40px, 6vw, 62px);
+
+            line-height: 1.1;
+
+            font-weight: 800;
+        }
+
+
+        .services-hero h1 span {
+
+            color: #ffd052;
+        }
+
+
+        .services-hero p {
+
+            max-width: 700px;
+
+            margin: auto;
+
+            color: #e1e7f5;
+
+            font-size: 18px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           MAIN
+        ===================================================== */
+
+        .services-section {
+
+            padding: 90px 0;
+        }
+
+
+        .services-container {
+
+            width: min(1180px, 92%);
+
+            margin: auto;
+        }
+
+
+        .section-heading {
+
+            text-align: center;
+
+            margin-bottom: 50px;
+        }
+
+
+        .section-heading h2 {
+
+            margin: 0 0 12px;
+
+            font-size: 38px;
+
+            color: #111827;
+        }
+
+
+        .section-heading p {
+
+            max-width: 700px;
+
+            margin: auto;
+
+            color: #667085;
+
+            font-size: 17px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           SERVICE CARDS
+        ===================================================== */
+
+        .services-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 22px;
+        }
+
+
+        .service-card {
+
+            position: relative;
+
+            padding: 30px 26px;
+
+            background: white;
+
+            border:
+                1px solid #e7eaf0;
+
+            border-radius: 16px;
+
+            box-shadow:
+                0 8px 28px rgba(15,23,42,.055);
+
+            transition:
+                transform .3s ease,
+                box-shadow .3s ease,
+                border-color .3s ease;
+        }
+
+
+        .service-card:hover {
+
+            transform:
+                translateY(-7px);
+
+            box-shadow:
+                0 18px 40px rgba(15,23,42,.11);
+
+            border-color:
+                #d7def0;
+        }
+
+
+        .service-icon {
+
+            width: 58px;
+            height: 58px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 14px;
+
+            background:
+                #eef3ff;
+
+            font-size: 27px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .service-card h3 {
+
+            margin: 0 0 10px;
+
+            font-size: 19px;
+
+            color: #172033;
+        }
+
+
+        .service-card p {
+
+            margin: 0;
+
+            color: #667085;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           FEATURED SERVICE
+        ===================================================== */
+
+        .featured-service {
+
+            margin-top: 55px;
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 45px;
+
+            align-items: center;
+
+            padding: 40px;
+
+            border-radius: 20px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #101b44,
+                    #203f94
+                );
+
+            color: white;
+
+            overflow: hidden;
+        }
+
+
+        .featured-service img {
+
+            width: 100%;
+
+            max-height: 370px;
+
+            object-fit: cover;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 15px 35px rgba(0,0,0,.25);
+        }
+
+
+        .featured-content h2 {
+
+            margin: 0 0 18px;
+
+            font-size: 34px;
+        }
+
+
+        .featured-content p {
+
+            color: #dce4f8;
+
+            line-height: 1.8;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* =====================================================
+           SOLUTIONS GALLERY
+        ===================================================== */
+
+        .gallery-section {
+
+            padding: 90px 0;
+
+            background: white;
+        }
+
+
+        .gallery-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .gallery-card {
+
+            background: white;
+
+            border-radius: 15px;
+
+            overflow: hidden;
+
+            border:
+                1px solid #e7eaf0;
+
+            box-shadow:
+                0 7px 25px rgba(15,23,42,.07);
+
+            transition:
+                transform .3s ease,
+                box-shadow .3s ease;
+        }
+
+
+        .gallery-card:hover {
+
+            transform:
+                translateY(-6px);
+
+            box-shadow:
+                0 15px 35px rgba(15,23,42,.13);
+        }
+
+
+        .gallery-card img {
+
+            width: 100%;
+
+            height: 210px;
+
+            object-fit: cover;
+
+            display: block;
+        }
+
+
+        .gallery-card-content {
+
+            padding: 18px;
+        }
+
+
+        .gallery-card h3 {
+
+            margin: 0 0 6px;
+
+            font-size: 16px;
+
+            color: #172033;
+        }
+
+
+        .gallery-card p {
+
+            margin: 0;
+
+            font-size: 13px;
+
+            color: #667085;
+        }
+
+
+        /* =====================================================
+           CTA
+        ===================================================== */
+
+        .services-cta {
+
+            padding: 90px 0;
+
+            background:
+                #f5f7fb;
+        }
+
+
+        .cta-box {
+
+            width: min(900px, 92%);
+
+            margin: auto;
+
+            padding: 55px 30px;
+
+            text-align: center;
+
+            border-radius: 22px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #101b44,
+                    #1f408f
+                );
+
+            color: white;
+
+            box-shadow:
+                0 20px 45px rgba(15,23,42,.15);
+        }
+
+
+        .cta-box h2 {
+
+            margin: 0 0 15px;
+
+            font-size: 36px;
+        }
+
+
+        .cta-box p {
+
+            max-width: 650px;
+
+            margin: 0 auto 28px;
+
+            color: #dce4f8;
+
+            line-height: 1.7;
+        }
+
+
+        .cta-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-height: 48px;
+
+            padding: 0 26px;
+
+            border-radius: 8px;
+
+            background: #ffd052;
+
+            color: #111827;
+
+            font-weight: 700;
+
+            transition:
+                transform .25s ease,
+                background .25s ease;
+        }
+
+
+        .cta-button:hover {
+
+            transform:
+                translateY(-3px);
+
+            background:
+                #ffe080;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        .services-footer {
+
+            padding: 28px 15px;
+
+            text-align: center;
+
+            background: #080f25;
+
+            color: #9faac2;
+
+            font-size: 14px;
+        }
+
+
+        .services-footer strong {
+
+            color: white;
+        }
+
+
+        /* =====================================================
+           TABLET
+        ===================================================== */
+
+        @media (max-width: 1000px) {
+
+            .services-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .gallery-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 700px) {
+
+            .services-section,
+            .gallery-section,
+            .services-cta {
+
+                padding: 65px 0;
+            }
+
+
+            .services-hero {
+
+                min-height: 300px;
+            }
+
+
+            .services-hero-content {
+
+                padding: 55px 0;
+            }
+
+
+            .services-hero h1 {
+
+                font-size: 42px;
+            }
+
+
+            .services-hero p {
+
+                font-size: 16px;
+            }
+
+
+            .section-heading h2 {
+
+                font-size: 30px;
+            }
+
+
+            .services-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .gallery-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .featured-service {
+
+                grid-template-columns: 1fr;
+
+                padding: 25px;
+
+                gap: 30px;
+            }
+
+
+            .featured-content h2 {
+
+                font-size: 29px;
+            }
+
+
+            .cta-box h2 {
+
+                font-size: 29px;
+            }
+
+        }
+
+
+        /* =====================================================
+           SMALL MOBILE
+        ===================================================== */
+
+        @media (max-width: 420px) {
+
+            .services-hero h1 {
+
+                font-size: 36px;
+            }
+
+
+            .service-card {
+
+                padding: 25px 22px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         REUSABLE HEADER
+    ===================================================== -->
+
+    <div id="header"></div>
+
+
+
+    <!-- =====================================================
+         HERO
+    ===================================================== -->
+
+    <section class="services-hero">
+
+        <div class="services-hero-content">
+
+            <div class="services-badge">
+                MSS WEB SOLUTIONS
+            </div>
+
+
+            <h1>
+                Our <span>Services</span>
+            </h1>
+
+
+            <p>
+                Smart, practical and modern digital
+                solutions designed around the needs
+                of your business.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SERVICES
+    ===================================================== -->
+
+    <section class="services-section">
+
+        <div class="services-container">
+
+
+            <div class="section-heading">
+
+                <h2>
+                    What We Can Build For You
+                </h2>
+
+                <p>
+                    From business management systems to
+                    mobile applications and professional
+                    websites, we create solutions that
+                    simplify everyday operations.
+                </p>
+
+            </div>
+
+
+
+            <div class="services-grid">
+
+
+                <!-- 1 -->
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        📦
+                    </div>
+
+                    <h3>
+                        Assets / Store Management
+                    </h3>
+
+                    <p>
+                        Track assets, inventory, stores,
+                        stock movements and business
+                        resources from one centralized system.
+                    </p>
+
+                </div>
+
+
+                <!-- 2 -->
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        📍
+                    </div>
+
+                    <h3>
+                        Attendance Management
+                    </h3>
+
+                    <p>
+                        Employee attendance, punch in/out,
+                        location tracking, history and
+                        attendance reporting.
+                    </p>
+
+                </div>
+
+
+                <!-- 3 -->
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        👥
+                    </div>
+
+                    <h3>
+                        HRMS
+                    </h3>
+
+                    <p>
+                        Human resource management solutions
+                        for employee information, attendance,
+                        leave and business administration.
+                    </p>
+
+                </div>
+
+
+                <!-- 4 -->
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        💳
+                    </div>
+
+                    <h3>
+                        Billing Management
+                    </h3>
+
+                    <p>
+                        Manage billing, invoices, customers
+                        and business transactions through
+                        an easy-to-use application.
+                    </p>
+
+                </div>
+
+
+                <!-- 5 -->
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        🩺
+                    </div>
+
+                    <h3>
+                        Doctor Clinic Management
+                    </h3>
+
+                    <p>
+                        Patient, appointment, token and
+                        clinic workflow management solutions.
+                    </p>
+
+                </div>
+
+
+                <!-- 6 -->
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        🎫
+                    </div>
+
+                    <h3>
+                        Token System
+                    </h3>
+
+                    <p>
+                        Digital token and queue management
+                        systems for clinics, offices and
+                        service centers.
+                    </p>
+
+                </div>
+
+
+                <!-- 7 -->
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        📱
+                    </div>
+
+                    <h3>
+                        Mobile Application
+                    </h3>
+
+                    <p>
+                        Responsive and mobile-friendly
+                        applications for customers,
+                        employees and business operations.
+                    </p>
+
+                </div>
+
+
+                <!-- 8 -->
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        📅
+                    </div>
+
+                    <h3>
+                        Booking & Reservations
+                    </h3>
+
+                    <p>
+                        Booking, reservation, availability
+                        and scheduling systems for different
+                        types of businesses.
+                    </p>
+
+                </div>
+
+
+                <!-- 9 -->
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        💻
+                    </div>
+
+                    <h3>
+                        Web Applications
+                    </h3>
+
+                    <p>
+                        Custom web applications and business
+                        software designed around your workflow.
+                    </p>
+
+                </div>
+
+
+                <!-- 10 -->
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        📋
+                    </div>
+
+                    <h3>
+                        Business Directory
+                    </h3>
+
+                    <p>
+                        Business listing and directory
+                        platforms for organizing services,
+                        companies and contact information.
+                    </p>
+
+                </div>
+
+
+                <!-- 11 -->
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        🌐
+                    </div>
+
+                    <h3>
+                        Web Design
+                    </h3>
+
+                    <p>
+                        Professional, responsive websites
+                        optimized for desktop, tablet and
+                        mobile devices.
+                    </p>
+
+                </div>
+
+
+                <!-- 12 -->
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        ☁️
+                    </div>
+
+                    <h3>
+                        Hosting & Deployment
+                    </h3>
+
+                    <p>
+                        Website deployment and hosting
+                        solutions for your online presence.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 FEATURED
+            ================================================== -->
+
+            <div class="featured-service">
+
+
+                <div>
+
+                    <img
+                        src="image/asset-management-fe464476_3.png"
+                        alt="Business Management Solution">
+
+                </div>
+
+
+                <div class="featured-content">
+
+                    <h2>
+                        Business Solutions Built Around You
+                    </h2>
+
+                    <p>
+                        Every organization has a different
+                        workflow. We develop practical
+                        applications that can be adapted to
+                        your business requirements, helping
+                        reduce manual work and organize your
+                        information.
+                    </p>
+
+
+                    <a
+                        href="contact.html"
+                        class="cta-button">
+
+                        Discuss Your Requirement
+
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SOLUTION GALLERY
+    ===================================================== -->
+
+    <section class="gallery-section">
+
+        <div class="services-container">
+
+
+            <div class="section-heading">
+
+                <h2>
+                    Our Solutions
+                </h2>
+
+                <p>
+                    A selection of application concepts
+                    and business solutions.
+                </p>
+
+            </div>
+
+
+
+            <div class="gallery-grid">
+
+
+                <!-- Asset -->
+
+                <div class="gallery-card">
+
+                    <img
+                        src="image/asset-management-fe464476_3.png"
+                        alt="Asset Management">
+
+                    <div class="gallery-card-content">
+
+                        <h3>
+                            Asset Management
+                        </h3>
+
+                        <p>
+                            Manage business assets and resources.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Billing -->
+
+                <div class="gallery-card">
+
+                    <img
+                        src="image/bill_3.jpg"
+                        alt="Billing Management">
+
+                    <div class="gallery-card-content">
+
+                        <h3>
+                            Billing Management
+                        </h3>
+
+                        <p>
+                            Simplify billing and transactions.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- HRMS -->
+
+                <div class="gallery-card">
+
+                    <img
+                        src="image/hrms_3.png"
+                        alt="HRMS">
+
+                    <div class="gallery-card-content">
+
+                        <h3>
+                            HRMS
+                        </h3>
+
+                        <p>
+                            Manage employee information and HR.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Attendance -->
+
+                <div class="gallery-card">
+
+                    <img
+                        src="image/attendance-management-system-hrs-best-buddy_2.png"
+                        alt="Attendance Management">
+
+                    <div class="gallery-card-content">
+
+                        <h3>
+                            Attendance System
+                        </h3>
+
+                        <p>
+                            Digital attendance and tracking.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Token -->
+
+                <div class="gallery-card">
+
+                    <img
+                        src="image/token-management-system_2.jpg"
+                        alt="Token Management">
+
+                    <div class="gallery-card-content">
+
+                        <h3>
+                            Token Management
+                        </h3>
+
+                        <p>
+                            Digital queue and token management.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Call Log -->
+
+                <div class="gallery-card">
+
+                    <img
+                        src="image/call-log-management_3.png"
+                        alt="Call Log Management">
+
+                    <div class="gallery-card-content">
+
+                        <h3>
+                            Call Log Management
+                        </h3>
+
+                        <p>
+                            Organize service calls and requests.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Mobile -->
+
+                <div class="gallery-card">
+
+                    <img
+                        src="image/mobile-application-in-development-of-company-and-business_2.jpg"
+                        alt="Mobile Application">
+
+                    <div class="gallery-card-content">
+
+                        <h3>
+                            Mobile Applications
+                        </h3>
+
+                        <p>
+                            Mobile-friendly business solutions.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Conveyance -->
+
+                <div class="gallery-card">
+
+                    <img
+                        src="image/conveyance-3_2.png"
+                        alt="Conveyance Management">
+
+                    <div class="gallery-card-content">
+
+                        <h3>
+                            Conveyance Management
+                        </h3>
+
+                        <p>
+                            Organize employee travel and expenses.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CTA
+    ===================================================== -->
+
+    <section class="services-cta">
+
+        <div class="cta-box">
+
+            <h2>
+                Have a Project in Mind?
+            </h2>
+
+            <p>
+                Tell us about your requirement and
+                let's discuss how a custom web solution
+                can support your business.
+            </p>
+
+            <a
+                href="contact.html"
+                class="cta-button">
+
+                Contact Us
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+
+    <footer class="services-footer">
+
+        © <span id="serviceYear"></span>
+
+        <strong>
+            MSS WEB SOLUTIONS
+        </strong>
+
+        · All Rights Reserved.
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         REUSABLE HEADER
+    ===================================================== -->
+
+    <script src="header.js"></script>
+
+
+    <script>
+
+        document.getElementById(
+            "serviceYear"
+        ).textContent =
+            new Date().getFullYear();
+
+    </script>
+
+
+</body>
+
+</html>
